@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>StaySold in one minute</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: quiet luxury, a fine front door; calm, confident, few words.
+   IDEA: the StaySold story in one minute: remember, reach, refer.
+   PICTURE: the Today screen on a phone against gold arches.
+   COLOUR and TYPE: obsidian, warm white, champagne gold, cream; Cormorant Garamond over Manrope.
+   LAYOUT: obsidian hero, three warm white beats, obsidian close; content to 1080px. */
+:root{--bg:#F4F2ED;--raised:#FBFAF7;--ink:#0B0F14;--muted:#5B6470;--line:#D9DBDF;--gold:#7D5E2A;--champ:#C9A35E;--gold2:#D4B274;--cream:#EFE6D3;--ob:#0B0F14;--ob2:#141A21;--obline:#2A3139;--obink:#F4F2ED;--obmuted:#A3ACB7}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Manrope,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{margin:0;text-wrap:balance}p{margin:0}
+.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500}
+.wrap{max-width:1080px;margin:0 auto}
+.band{padding:clamp(44px,6vw,80px) max(5vw,16px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:10px;font:700 16px Manrope,sans-serif;text-decoration:none}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--champ);outline-offset:2px}
+.btn.primary{background:var(--champ);color:var(--ob)}
+.btn.ghost{color:var(--obink);border:1px solid #4A5560}
+.dark{background:var(--ob);color:var(--obink);position:relative;overflow:hidden}
+.top{display:flex;align-items:center;gap:10px;font:600 26px/1 'Cormorant Garamond',Georgia,serif;color:var(--obink);margin-bottom:clamp(36px,5vw,56px)}
+.top b{color:var(--gold2);font-weight:600}
+.lattice{position:absolute;right:-8%;top:-12%;width:min(640px,80vw);opacity:.5}
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+.hero h1{font:500 clamp(46px,7vw,80px)/1 'Cormorant Garamond',Georgia,serif}
+.hero h1 span{background:linear-gradient(135deg,#F3E2B3,#C9A35E 55%,#A9844A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:19px;color:var(--obmuted);margin-top:20px;max-width:520px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.phone{justify-self:center;width:min(300px,100%);background:var(--ob2);border:1px solid var(--obline);border-radius:42px;padding:11px;box-shadow:0 36px 80px rgba(0,0,0,.55)}
+.screen{background:#FBFAF7;color:#0B0F14;border-radius:32px;overflow:hidden}
+.screen .hd{display:flex;justify-content:space-between;align-items:baseline;padding:20px 16px 10px;border-bottom:1px solid #D9DBDF}
+.screen .hd b{font:600 24px 'Cormorant Garamond',Georgia,serif}
+.screen .hd span{font-size:12px;color:#5B6470;font-weight:600}
+.cards{display:grid;gap:9px;padding:12px}
+.card{background:#fff;border:1px solid #D9DBDF;border-radius:13px;padding:11px 13px;display:grid;gap:2px;font-size:13px}
+.card small{font-size:11px;font-weight:700;color:#5B6470}
+.card strong{font-size:14px}
+.card span{color:#5B6470}
+.card.go{background:#0B0F14;border-color:#0B0F14;color:#F4F2ED}.card.go small{color:#D4B274}
+.card.go em{justify-self:start;font-style:normal;margin-top:6px;background:#C9A35E;color:#0B0F14;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px}
+.sample{font-size:12px;color:var(--obmuted);text-align:center;margin-top:10px}
+/* gap */
+.gap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.gap h2,.beats-h{font:500 clamp(32px,4vw,44px)/1.08 'Cormorant Garamond',Georgia,serif}
+.gap .lead{color:var(--muted);font-size:17px;margin-top:14px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.stats div{border-top:2px solid var(--gold);padding-top:12px;display:grid;gap:4px}
+.stats b{font:500 clamp(52px,6vw,68px)/1 'Cormorant Garamond',Georgia,serif;color:var(--gold)}
+.stats span{font-size:15px;line-height:1.45}
+.src{grid-column:1/-1;font-size:12px;color:var(--muted)}
+/* beats */
+.cream{background:var(--cream)}
+.beats{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.beats li{background:var(--raised);border-radius:18px;padding:26px;display:grid;gap:10px;align-content:start}
+.beats .ic{width:44px;height:44px}
+.beats h3{font:500 32px/1 'Cormorant Garamond',Georgia,serif;color:var(--gold)}
+.beats p{color:var(--muted);font-size:15px;line-height:1.55}
+/* proof points */
+.points{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.points li{border-top:1px solid var(--line);padding-top:14px;font-size:15px;color:var(--muted);line-height:1.5}
+.points b{display:block;color:var(--ink);font-size:17px;margin-bottom:4px}
+.more{display:inline-flex;align-items:center;gap:8px;margin-top:22px;min-height:44px;font-weight:700;color:var(--gold);text-decoration:none;border-bottom:1px solid currentColor;padding:4px 0}
+.dark .more{color:var(--gold2)}
+.more:after{content:"\2192"}
+/* postcards */
+.mail{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center;position:relative}
+.mail h2{font:500 clamp(32px,4vw,46px)/1.06 'Cormorant Garamond',Georgia,serif}
+.mail p.l{color:var(--obmuted);font-size:17px;margin-top:14px}
+.mail ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:8px;color:var(--obink);font-size:15px}
+.mail li{display:flex;gap:10px}.mail li:before{content:"";flex:0 0 7px;height:7px;margin-top:8px;border-radius:50%;background:var(--champ)}
+.pair{position:relative;aspect-ratio:1.15}
+.pc{position:absolute;width:76%;aspect-ratio:1.5;border-radius:5px;box-shadow:0 24px 50px rgba(0,0,0,.55);overflow:hidden}
+.pc.f{left:0;top:0;background:#141A21;border:1px solid #4A5560;display:grid;grid-template-columns:1fr 1.1fr}
+.pc.f svg{width:100%;height:100%}
+.pc.f div{display:grid;align-content:center;gap:5px;padding-right:10%}
+.pc.f small{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#A3ACB7}
+.pc.f b{font:500 clamp(20px,2.4vw,28px)/1.05 'Cormorant Garamond',Georgia,serif;background:linear-gradient(135deg,#F3E2B3,#C9A35E 55%,#A9844A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pc.b{right:0;bottom:0;background:#FBFAF7;display:grid;grid-template-columns:1.35fr 1fr;padding:6%;gap:6%;color:#0B0F14}
+.pc.b p{font:italic 500 clamp(15px,1.7vw,19px)/1.3 'Cormorant Garamond',Georgia,serif;color:#1F3A6B}
+.pc.b mark{background:rgba(201,163,94,.3);color:inherit;border-radius:3px;padding:0 2px}
+.pc.b .ad{border-left:1px solid #D9DBDF;padding-left:8%;display:grid;align-content:space-between;font-size:10px;color:#2A3139}
+.pc.b .st{justify-self:end;width:30px;height:36px;border:2px dashed #C8CCD2;border-radius:3px}
+.legend{position:relative;font-size:12px;color:var(--obmuted);margin-top:12px;text-align:center}
+.legend mark{background:rgba(201,163,94,.35);color:var(--obink);border-radius:3px;padding:0 3px}
+@media(max-width:860px){.mail{grid-template-columns:minmax(0,1fr)}}
+/* close */
+.close{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:center;position:relative}
+.close h2{font:500 clamp(34px,4.6vw,52px)/1.05 'Cormorant Garamond',Georgia,serif}
+.close p{color:var(--obmuted);font-size:17px;margin-top:14px;max-width:560px}
+.price{background:var(--ob2);border:1px solid var(--obline);border-radius:18px;padding:26px;display:grid;gap:8px}
+.price small{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold2)}
+.price b{font:500 60px/1 'Cormorant Garamond',Georgia,serif}
+.price span{color:var(--obmuted);font-size:14px}
+footer{background:var(--ob);color:var(--obmuted);border-top:1px solid var(--obline);padding:24px max(5vw,16px);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+@media(max-width:860px){.hero,.gap,.close{grid-template-columns:minmax(0,1fr)}.beats{grid-template-columns:minmax(0,1fr)}.points{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media(max-width:480px){.points,.stats{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="kg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="96" y2="96"><stop offset="0" stop-color="#F3E2B3"/><stop offset=".5" stop-color="#C9A35E"/><stop offset="1" stop-color="#8C6A32"/></linearGradient></defs></svg>
+<main>
+<section class="band dark">
+ <svg class="lattice" viewBox="0 0 560 560" aria-hidden="true"><g fill="none" stroke="#C9A35E" stroke-opacity=".28" stroke-width="1.2" id="lat"></g></svg>
+ <div class="wrap">
+  <div class="top"><svg width="38" height="38" viewBox="0 0 96 96" aria-hidden="true"><path d="M26 82V44a22 22 0 0 1 44 0v38" fill="none" stroke="url(#kg)" stroke-width="3.6" stroke-linejoin="round"/><path d="M33 82V46a15 15 0 0 1 30 0v36" fill="none" stroke="url(#kg)" stroke-width="1.4"/><path d="M18 84h60" stroke="url(#kg)" stroke-width="3.6" stroke-linecap="round"/><circle cx="48" cy="52" r="7" fill="url(#kg)"/><path d="M44.2 56h7.6l2.2 16H42z" fill="url(#kg)"/></svg><span>Stay<b>Sold</b></span></div>
+  <div class="hero">
+   <div>
+    <h1>Stay their agent <span>for life.</span></h1>
+    <p>StaySold is the follow-up system that turns past clients into referrals. It remembers every client, writes the next touch in your voice, and sends it when you approve.</p>
+    <div class="ctas"><a class="btn primary" href="/#pilot">Request pilot access</a><a class="btn ghost" href="/#tour">Take the full tour</a></div>
+   </div>
+   <div>
+    <div class="phone" role="img" aria-label="The StaySold Today screen: a monthly plan to approve, a client reply, a home anniversary and a referral ask">
+     <div class="screen"><div class="hd"><b>Today</b><span>Thursday</span></div>
+      <div class="cards">
+       <div class="card go"><small>Ready for you</small><strong>December plan: 212 clients</strong><em>Review and approve</em></div>
+       <div class="card"><small>Reply waiting</small><strong>Maria L., past client</strong><span>"Do you know a good roofer?"</span></div>
+       <div class="card"><small>Home anniversary, Saturday</small><strong>The Parks, 5 years</strong><span>Card and text scheduled</span></div>
+       <div class="card"><small>Referral ask</small><strong>Dan and Priya S.</strong><span>Check-in goes out tomorrow</span></div>
+      </div>
+     </div>
+    </div>
+    <p class="sample">Sample screen with example clients</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="band">
+ <div class="wrap gap">
+  <div>
+   <h2>The goodwill is there. The reminder isn't.</h2>
+   <p class="lead">Clients forget names, lose numbers and never get asked. The agent who stays in touch is the one they name when a friend says "we're thinking about selling."</p>
+   <a class="more" href="/#referrals">How StaySold earns referrals</a>
+  </div>
+  <div class="stats">
+   <div><b>88%</b><span>of buyers would use or recommend their agent again</span></div>
+   <div><b>38%</b><span>of buyers and sellers have never once recommended their agent</span></div>
+   <p class="src">NAR 2026 Profile of Home Buyers and Sellers, as reported by Broker Agent Magazine, Nov 2026.</p>
+  </div>
+ </div>
+</section>
+
+<section class="band cream">
+ <div class="wrap">
+  <h2 class="beats-h">Remember. Reach. Refer.</h2>
+  <ol class="beats">
+   <li><svg class="ic" viewBox="0 0 96 96" aria-hidden="true"><path d="M26 84V44a22 22 0 0 1 44 0v40z" fill="#EFE6D3" stroke="#7D5E2A" stroke-width="5" stroke-linejoin="round"/><circle cx="48" cy="54" r="7" fill="#7D5E2A"/><path d="M44.2 58h7.6l2.2 14H42z" fill="#7D5E2A"/></svg><h3>Remember</h3><p>Every client, every home, every date that matters: anniversaries, birthdays, the kids and the dog. All of it shapes what you send.</p></li>
+   <li><svg class="ic" viewBox="0 0 96 96" aria-hidden="true"><path d="M26 84V44a22 22 0 0 1 44 0v40z" fill="#C9A35E" stroke="#7D5E2A" stroke-width="5" stroke-linejoin="round"/><circle cx="48" cy="54" r="7" fill="#0B0F14"/><path d="M44.2 58h7.6l2.2 14H42z" fill="#0B0F14"/></svg><h3>Reach</h3><p>Texts, emails, events and real postcards in your voice. You approve one plan a month. No client hears from you more than once a week.</p></li>
+   <li><svg class="ic" viewBox="0 0 96 96" aria-hidden="true"><path d="M26 84V44a22 22 0 0 1 44 0v40z" fill="#7D5E2A" stroke="#7D5E2A" stroke-width="5" stroke-linejoin="round"/><circle cx="48" cy="54" r="7" fill="#F4F2ED"/><path d="M44.2 58h7.6l2.2 14H42z" fill="#F4F2ED"/></svg><h3>Refer</h3><p>Referral asks at the happiest moments, a share link clients can text a friend, a thank-you when it works, and reviews on your Google profile.</p></li>
+  </ol>
+  <a class="more" href="/#tour">See every screen in the product tour</a>
+ </div>
+</section>
+
+
+<section class="band dark">
+ <div class="wrap mail">
+  <div>
+   <h2>Personalized postcards, mailed for you.</h2>
+   <p class="l">A real card in the mailbox on the moments that matter, written from what you know about each client. StaySold designs it, you approve it, and it's printed, stamped and mailed automatically.</p>
+   <ul><li>Home anniversaries, holidays, event invites and closing thank-yous</li><li>Printed postcards, handwritten-style notes and real-pen cards</li><li>Names, homes, kids and pets pulled from the client profile</li></ul>
+   <a class="more" href="/#postcards">See sample postcards and pricing</a>
+  </div>
+  <div>
+   <div class="pair" role="img" aria-label="Sample personalized postcard: a black and gold front reading Happy 5 years, Jordan and Lee, and a handwritten-style back mentioning their dog Biscuit, their garden and a kitchen project">
+    <div class="pc f"><svg viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M44 170V96a36 36 0 0 1 72 0v74z" fill="#0B0F14" stroke="#C9A35E" stroke-width="2"/><circle cx="80" cy="112" r="6" fill="#C9A35E"/><path d="M77 116h6l2 14H75z" fill="#C9A35E"/></svg><div><small>Alder St &middot; 2021</small><b>Happy 5 years, Jordan and Lee</b></div></div>
+    <div class="pc b"><p>Five years in the <mark>Alder St</mark> house! Hope <mark>Biscuit</mark> still guards the <mark>garden</mark>. Here when the <mark>kitchen</mark> project starts. Sarah</p><div class="ad"><span class="st" aria-hidden="true"></span><span>Jordan and Lee Park<br>Alder St<br>Oregon City, OR</span></div></div>
+   </div>
+   <p class="legend"><mark>Highlighted</mark> details come from the client profile. Sample with example clients.</p>
+  </div>
+ </div>
+</section>
+
+<section class="band">
+ <div class="wrap">
+  <ul class="points">
+   <li><b>Nothing sends without you</b>One review a month, then it runs.</li>
+   <li><b>Small offices compete</b>The follow-up of a big brokerage, without the staff.</li>
+   <li><b>Teams never miss a reply</b>Alerts reach the whole team the moment a client writes.</li>
+   <li><b>Built to stay welcome</b>Paced per client, quiet hours, opt-outs handled for you.</li>
+  </ul>
+  <a class="more" href="/#mix">Why it works for small offices and big teams</a>
+ </div>
+</section>
+
+<section class="band dark">
+ <div class="wrap close">
+  <div>
+   <h2>A full year costs less than one referral.</h2>
+   <p>One referred sale pays for StaySold. Every one after that is yours. Now inviting pilot agents in the Portland metro.</p>
+   <div class="ctas"><a class="btn primary" href="/#pilot">Request pilot access</a><a class="btn ghost" href="/#pricing">See all plans</a></div>
+  </div>
+  <div class="price"><small>Solo plan</small><b>$66</b><span>per month, billed yearly ($790). $79 month to month.</span><a class="more" href="/#pricing" style="margin-top:6px">Compare Solo, Premium and Team</a></div>
+ </div>
+</section>
+</main>
+<footer><div class="wrap"><span>StaySold &middot; Made in Oregon for agents who stay in touch</span><span>&copy; 2026 StaySold</span></div></footer>
+<script>
+const lat=document.getElementById('lat');let d='';
+for(let r=0;r<5;r++)for(let c=0;c<5;c++){const x=40+c*110+(r%2?55:0),y=30+r*110;if(x>500)continue;d+=`<path d="M${x} ${y+80}V${y+30}a25 25 0 0 1 50 0v50"/>`;}
+lat.innerHTML=d;
+</script>
+</body>
+</html>
