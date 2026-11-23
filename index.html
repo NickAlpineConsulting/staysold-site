@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="description" content="StaySold keeps real estate agents in touch with past clients for life: texts, emails, events and mailed cards in your voice, sent after you approve, so the next referral comes to you.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StaySold">
+<meta property="og:url" content="https://staysold.alpineconsultingoregon.com/">
+<meta property="og:title" content="StaySold: stay their agent for life">
+<meta property="og:description" content="Turn past clients into referrals. Every touch in your voice, sent after you approve.">
+<meta property="og:image" content="https://staysold.alpineconsultingoregon.com/og.jpg">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="525">
+<meta property="og:image:alt" content="StaySold: stay their agent for life. A sample agent dashboard with referrals this year, and a client's text offering a referral.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="StaySold: stay their agent for life">
+<meta name="twitter:description" content="Turn past clients into referrals. Every touch in your voice, sent after you approve.">
+<meta name="twitter:image" content="https://staysold.alpineconsultingoregon.com/og.jpg">
 <title>StaySold: turn past clients into referrals</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +65,7 @@ header{background:var(--ob);color:var(--obink);border-bottom:1px solid var(--obl
 /* hero */
 .hero{position:relative;background:var(--ob);color:var(--obink);overflow:hidden}
 .hero .lattice{position:absolute;right:-6%;top:-10%;width:min(720px,80vw);opacity:.55}
-.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:48px;align-items:center}
 .hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(48px,7vw,84px);line-height:1}
 .hero h1 span{background:linear-gradient(135deg,#F3E2B3,#C9A35E 55%,#A9844A);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p.sub{font-size:19px;color:var(--obmuted);max-width:540px;margin-top:22px}
@@ -75,6 +89,60 @@ header{background:var(--ob);color:var(--obink);border-bottom:1px solid var(--obl
 .card.ice{background:#EFE6D3;border-color:#EFE6D3;display:flex;justify-content:space-between;font-size:13px;font-weight:700}
 .card.ice i{font-style:normal;color:#7D5E2A;font-weight:600}
 .sample{font-size:13px;color:var(--obmuted);text-align:center;margin-top:12px}
+/* hero scene */
+.hero:before{content:"";position:absolute;right:-14%;top:-30%;width:min(1100px,120vw);aspect-ratio:1;background:radial-gradient(closest-side,rgba(201,163,94,.42),rgba(201,163,94,.14) 45%,rgba(201,163,94,0) 72%);pointer-events:none}
+.hero:after{content:"";position:absolute;left:-20%;bottom:-40%;width:700px;aspect-ratio:1;background:radial-gradient(closest-side,rgba(243,226,179,.08),transparent 70%);pointer-events:none}
+.hero .lattice{opacity:.3}
+.scene-wrap{justify-self:center;width:min(600px,100%)}
+.scene{position:relative;width:100%;aspect-ratio:600/600;font-family:Manrope,system-ui,sans-serif}
+.dash{position:absolute;left:0;top:3%;width:84%;background:linear-gradient(160deg,#1A222C,#0E1318 70%);border:1px solid #33404C;border-radius:22px;padding:18px;box-shadow:0 40px 90px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.04);display:grid;gap:12px;color:#F4F2ED}
+.dh{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.dh small{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#D4B274}
+.dh span{font-size:11px;font-weight:700;background:#141A21;border:1px solid #2A3139;border-radius:999px;padding:4px 10px;color:#A3ACB7;white-space:nowrap}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.kpi{background:#141A21;border:1px solid #2A3139;border-radius:12px;padding:10px 12px;display:grid;gap:2px}
+.kpi span{font-size:11px;color:#A3ACB7;font-weight:600}
+.kpi b{font:600 32px/1 'Cormorant Garamond',Georgia,serif}
+.kpi:last-child{border-color:#C9A35E;background:linear-gradient(160deg,#2A2417,#141A21)}
+.kpi:last-child b{background:linear-gradient(135deg,#F3E2B3,#C9A35E 60%,#A9844A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kpi i{font-style:normal;font-size:11px;font-weight:700;color:#D4B274}
+.spark{display:flex;align-items:flex-end;gap:6px;height:56px;padding:0 2px;width:58%}
+@media(max-width:600px){.spark{width:100%}}
+.spark span{flex:1;background:#2A3139;border-radius:4px 4px 2px 2px}
+.spark span.g{background:linear-gradient(#F3E2B3,#C9A35E);box-shadow:0 0 18px rgba(201,163,94,.45)}
+.ask{display:grid;gap:8px;background:#141A21;border:1px solid #2A3139;border-radius:12px;padding:12px;width:58%}
+.avs{display:flex;flex:0 0 auto}
+.apv{justify-self:start;font-style:normal;font-weight:700;font-size:12px;background:#C9A35E;color:#0B0F14;border-radius:8px;padding:6px 14px}
+.avs i{width:26px;height:26px;border-radius:50%;margin-left:-8px;border:2px solid #141A21;display:grid;place-items:center;font:700 9.5px Manrope,sans-serif;color:#0B0F14;font-style:normal}
+.avs i:first-child{margin-left:0}
+.ask div{display:grid;font-size:11.5px;line-height:1.35}
+.ask div b{font-size:13px}
+.ask div span{color:#A3ACB7}
+.rowx{display:flex;justify-content:space-between;gap:10px;font-size:12px;width:58%;padding:2px 4px 0;color:#A3ACB7}
+.rowx b{color:#F4F2ED;font-weight:700;white-space:nowrap}
+.ph2{position:absolute;right:0;bottom:0;width:44%;padding:9px;border-radius:38px;box-shadow:0 40px 80px rgba(0,0,0,.7),0 0 0 1px rgba(201,163,94,.25);animation:bob 7s ease-in-out infinite}
+.ph2 .screen{min-height:0;height:100%;border-radius:30px;display:flex;flex-direction:column}
+.ph2 .bar{padding:16px 14px 10px;gap:8px}
+.ph2 .msgs{padding:12px;gap:7px;align-content:start}
+.ph2 .bub{font-size:12px;max-width:88%;padding:8px 11px}
+.ph2 .bub small{font-size:9.5px}
+.refd{margin-top:4px;background:#0B0F14;color:#F4F2ED;border-radius:12px;padding:10px 12px;display:grid;gap:2px;font-size:11.5px;box-shadow:inset 0 0 0 1px #C9A35E}
+.refd b{color:#D4B274;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase}
+.scene .ph2{height:66%}
+.float{position:absolute;display:flex;align-items:center;gap:8px;background:#FBFAF7;color:#0B0F14;font-size:12.5px;font-weight:700;padding:9px 14px;border-radius:999px;box-shadow:0 14px 34px rgba(0,0,0,.45);white-space:nowrap;animation:bob 6s ease-in-out infinite}
+.float .dot{width:9px;height:9px;border-radius:50%;background:#C9A35E;box-shadow:0 0 0 4px rgba(201,163,94,.25)}
+.float .stars{color:#C9A35E;letter-spacing:1px;font-size:13px}
+.f1{left:4%;bottom:4%;animation-delay:-2s}
+.f2{right:-2%;top:-1%;animation-delay:-4s}
+@keyframes bob{50%{transform:translateY(-7px)}}
+@media(max-width:600px){
+ .scene{aspect-ratio:auto;display:grid;gap:0}
+ .dash{position:relative;width:100%;top:0}
+ .ask,.rowx{width:100%}
+ .ph2{position:relative;width:82%;justify-self:end;margin-top:-16px;height:auto}
+ .ph2 .screen{height:auto}
+ .f1{display:none}.f2{right:0;top:-18px}
+}
 /* why */
 .why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:start}
 .why .copy{display:grid;gap:16px;font-size:18px;line-height:1.65}
@@ -149,6 +217,20 @@ header{background:var(--ob);color:var(--obink);border-bottom:1px solid var(--obl
 .cardprices span{font-size:14px;color:var(--obmuted)}
 .cardprices p{font-size:14px;color:var(--obmuted)}
 .note{margin-top:18px;font-size:14px;color:var(--obmuted)}
+/* compare */
+.cmpw{margin-top:36px;overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--raised)}
+.cmpw:focus-visible{outline:3px solid var(--teal2);outline-offset:2px}
+.cmp{width:100%;min-width:860px;border-collapse:collapse;table-layout:fixed;font-size:15px;line-height:1.45}
+.cmp th,.cmp td{padding:16px 18px;text-align:left;vertical-align:top;border-top:1px solid var(--line)}
+.cmp thead th{border-top:0;font-size:14px;font-weight:700;color:var(--muted)}
+.cmp tbody th{font-size:14px;font-weight:700}
+.cmp thead th:first-child{width:170px}
+.cmp td{color:var(--muted)}
+.cmp td b{display:block;color:var(--ink);font:600 26px/1.1 'Cormorant Garamond',Georgia,serif;margin-bottom:2px}
+.cmp .us{background:var(--ice);color:var(--ink)}
+.cmp thead .us{color:var(--facet);font-size:16px}
+.cmp .na{font-style:italic}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 /* pilot */
 .steps{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
 .steps li{border-top:2px solid var(--facet);padding-top:16px;display:grid;gap:6px}
@@ -160,6 +242,9 @@ input,select{font:16px Manrope,sans-serif;padding:12px 14px;min-height:48px;bord
 .err{color:light-dark(#B3261E,#F2857C);font-size:14px;grid-column:1/-1;min-height:0}
 .done{margin-top:36px;background:var(--raised);border:1px solid var(--line);border-radius:18px;padding:28px;display:grid;gap:14px}
 .done pre{margin:0;white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:16px;font:15px/1.6 Manrope,sans-serif}
+.formcard{margin-top:36px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px;overflow:hidden}
+.formcard iframe{display:block;width:100%;min-height:980px;border:0}
+.formalt{margin-top:14px;font-size:14px;color:var(--muted)}
 /* faq */
 .faq{max-width:880px;margin:0 auto}
 details{border-top:1px solid var(--line);padding:6px 0}
@@ -439,7 +524,7 @@ footer a{color:var(--obmuted)}
    <span>Stay<b>Sold</b></span>
   </a>
   <nav aria-label="Main">
-   <a href="#how">How it works</a><a href="#referrals">Referrals</a><a href="#tour">Tour</a><a href="#postcards">Postcards</a><a href="#campaigns">Campaigns</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a>
+   <a href="#how">How it works</a><a href="#referrals">Referrals</a><a href="#tour">Tour</a><a href="#postcards">Postcards</a><a href="#campaigns">Campaigns</a><a href="#pricing">Pricing</a><a href="#compare">Compare</a><a href="#faq">Questions</a>
    <a class="btn primary" href="#pilot">Request pilot access</a>
   </nav>
  </div>
@@ -460,20 +545,34 @@ footer a{color:var(--obmuted)}
     <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A35E" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Opt-outs handled for you</li>
    </ul>
   </div>
-  <div>
-   <div class="phone" role="img" aria-label="The StaySold Today screen: a monthly plan to approve, a client reply, a home anniversary and a referral ask">
-    <div class="screen">
-     <div class="top"><b>Today</b><span>Thursday</span></div>
-     <div class="cards">
-      <div class="card go"><small>Ready for you</small><strong>December plan: 4 campaigns, 212 clients</strong><em>Review and approve</em></div>
-      <div class="card"><small>Reply waiting</small><strong>Maria L., past client</strong><span>"Do you know a good roofer? Ours is leaking."</span></div>
-      <div class="card"><small>Home anniversary, Saturday</small><strong>The Parks, 5 years</strong><span>Card and text scheduled</span></div>
-      <div class="card"><small>Referral ask</small><strong>Dan and Priya S., closed 90 days ago</strong><span>Check-in goes out tomorrow, 10 AM</span></div>
-      <div class="card ice">Under contract: 3<i>Milestones on track</i></div>
+  <div class="scene-wrap">
+   <div class="scene" role="img" aria-label="Sample StaySold screens. An agent dashboard shows 212 clients reached, 147 replies and 9 referrals this year, with 6 happy clients ready for a referral ask. In front, a phone shows a home anniversary text to Jordan and Lee Park and their reply offering to pass the agent's number to friends Sam and Theo, logged as a referral.">
+    <div class="dash" aria-hidden="true">
+     <div class="dh"><small>This year &middot; Sample</small><span>Sarah Lin &middot; Example Realty</span></div>
+     <div class="kpis">
+      <div class="kpi"><span>Clients reached</span><b>212</b><i>Every month</i></div>
+      <div class="kpi"><span>Replies</span><b>147</b><i>69% of clients</i></div>
+      <div class="kpi"><span>Referrals</span><b>9</b><i>4 closed</i></div>
+     </div>
+     <div class="spark"><span style="height:34%"></span><span style="height:46%"></span><span style="height:40%"></span><span style="height:58%"></span><span style="height:52%"></span><span style="height:64%"></span><span style="height:61%"></span><span style="height:72%"></span><span style="height:69%"></span><span style="height:84%"></span><span class="g" style="height:100%"></span></div>
+     <div class="ask"><span class="avs"><i style="background:#F3E2B3">JP</i><i style="background:#D4B274">DS</i><i style="background:#C9A35E">MR</i><i style="background:#2A3139;color:#D4B274">+3</i></span><div><b>6 clients ready for a referral ask</b><span>Survey 9 or 10, closed 60 to 120 days ago</span></div><em class="apv">Approve</em></div>
+     <div class="rowx"><span>December anniversaries</span><b>6 cards ready</b></div>
+    </div>
+    <div class="phone ph2" aria-hidden="true">
+     <div class="screen m">
+      <div class="bar"><span class="av" style="flex-basis:34px;height:34px;font-size:14px">JP</span><div style="display:grid;line-height:1.2"><b style="font-size:19px">The Parks</b><span style="font-size:11px;color:#5B6470;font-weight:600">Past client &middot; Alder St</span></div></div>
+      <div class="body msgs">
+       <span class="day">Saturday</span>
+       <div class="bub out">Happy 5 years at Alder St! Hope Biscuit still owns that backyard. Sarah<small>Home anniversary</small></div>
+       <div class="bub in">Thank you!! Our friends Sam and Theo want to buy. Can I give them your number?</div>
+       <div class="refd"><b>Referral logged</b><span>Sam and Theo T., credited to the Parks</span></div>
+      </div>
      </div>
     </div>
+    <div class="float f1" aria-hidden="true"><i class="dot"></i>Anniversary card mailed to the Parks</div>
+    <div class="float f2" aria-hidden="true"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>New Google review</div>
    </div>
-   <p class="sample">Sample screen with example clients</p>
+   <p class="sample">Sample screens with example clients</p>
   </div>
  </div>
 </section>
@@ -879,13 +978,6 @@ footer a{color:var(--obmuted)}
  </div>
 </section>
 
-<section class="band">
- <div class="wrap">
-  <h2>Everything follow-up needs. Nothing it doesn't.</h2>
-  <div class="grid" id="mods"></div>
- </div>
-</section>
-
 <section class="band icy" id="campaigns">
  <div class="wrap">
   <h2>Fourteen sequences, ready on day one.</h2>
@@ -944,6 +1036,25 @@ footer a{color:var(--obmuted)}
  </div>
 </section>
 
+<section class="band" id="compare">
+ <div class="wrap">
+  <p class="eyebrow">How it compares</p>
+  <h2>Keep your CRM. Add the follow-up.</h2>
+  <p class="lead" style="margin-top:14px">StaySold runs your past clients and sphere next to the CRM you already use, so you don't have to switch systems. Here is what common agent tools publish on their own pricing pages.</p>
+  <div class="cmpw" role="region" aria-label="Price comparison table" tabindex="0">
+   <table class="cmp">
+    <thead><tr><th scope="col"><span class="sr">Item</span></th><th scope="col" class="us">StaySold Solo</th><th scope="col">Follow Up Boss Grow</th><th scope="col">Homebot Solo</th><th scope="col">Lofty</th><th scope="col">BoldTrail</th></tr></thead>
+    <tbody>
+     <tr><th scope="row">Monthly price</th><td class="us"><b>$79</b>or $66 a month billed yearly</td><td><b>$69 per user</b>or $58 a month billed yearly</td><td><b>$50</b>billed monthly</td><td><b>Not published</b>quoted by sales</td><td><b>Not published</b>quoted by sales</td></tr>
+     <tr><th scope="row">Setup</th><td class="us">$299 white-glove setup: we import and clean your list</td><td>No setup fee</td><td>$50 one time</td><td>Quoted by sales</td><td>Quoted by sales</td></tr>
+     <tr><th scope="row">Add-ons on the pricing page</th><td class="us">Postcards from $1.75 a card, or 50 a month included with Premium</td><td>Calling, $39 per user a month</td><td>$10 a month for each 100 clients over 250</td><td>Text and call packages, priced on request</td><td>Quoted by sales</td></tr>
+    </tbody>
+   </table>
+  </div>
+  <p class="src">Prices from each company's own pricing page, checked November 23, 2026, before tax: followupboss.com/pricing, homebot.ai/pricing/agent, lofty.com/pricing and BoldTrail's pricing article. Lofty and BoldTrail quote prices through their sales teams. StaySold prices are pilot pricing. Names belong to their owners and are used only for comparison.</p>
+ </div>
+</section>
+
 <section class="band" id="pilot">
  <div class="wrap">
   <h2>Live in two weeks. Your list, your voice.</h2>
@@ -953,21 +1064,10 @@ footer a{color:var(--obmuted)}
    <li><b>Approve month one</b><span>Read every message before it goes. Change anything that doesn't sound like you.</span></li>
    <li><b>Watch replies come in</b><span>Your inbox and Today list show who's talking. You make the calls that matter.</span></li>
   </ol>
-  <form id="req" novalidate aria-label="Request pilot access">
-   <label for="f-name">Name<input id="f-name" name="name" autocomplete="name" required></label>
-   <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
-   <label for="f-phone">Mobile<input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
-   <label for="f-brok">Brokerage<input id="f-brok" name="brokerage" autocomplete="organization" required></label>
-   <label for="f-size">Past clients and sphere<select id="f-size" name="size"><option>Under 250</option><option>250 to 750</option><option>750 to 2,000</option><option>Over 2,000</option></select></label>
-   <button class="btn solid" type="submit">Request pilot access</button>
-   <p class="err" id="err" role="alert"></p>
-  </form>
-  <div class="done" id="done" hidden>
-   <h3 class="serif" style="font-size:30px" id="done-h">Thank you.</h3>
-   <p class="lead" id="done-p">Online sign-up opens at launch. Copy your request and send it to the person who shared this page. We'll follow up to set up your call.</p>
-   <pre id="done-text"></pre>
-   <div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn solid" type="button" id="copy">Copy request</button><button class="btn" type="button" id="edit" style="border:1px solid var(--plat);color:var(--ink);background:transparent">Edit</button></div>
+  <div class="formcard">
+   <iframe src="https://api.leadconnectorhq.com/widget/form/cbZlEPP92m08szzXY537" id="inline-cbZlEPP92m08szzXY537" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="StaySold pilot request" data-height="980" data-layout-iframe-id="inline-cbZlEPP92m08szzXY537" data-form-id="cbZlEPP92m08szzXY537" title="Request StaySold pilot access" loading="lazy"></iframe>
   </div>
+  <p class="formalt">Trouble with the form? Email <a href="mailto:info@alpineconsultingoregon.com?subject=StaySold%20pilot%20request">info@alpineconsultingoregon.com</a>.</p>
  </div>
 </section>
 
@@ -1000,33 +1100,6 @@ const stages=[
 const gem=(life)=>`<svg width="36" height="36" viewBox="0 0 96 96" aria-hidden="true"><path d="M26 84V44a22 22 0 0 1 44 0v40z" fill="${life?'var(--facet)':'var(--ice)'}" stroke="var(--facet)" stroke-width="5" stroke-linejoin="round"/><circle cx="48" cy="54" r="7" fill="${life?'var(--onfacet)':'var(--facet)'}"/><path d="M44.2 58h7.6l2.2 14H42z" fill="${life?'var(--onfacet)':'var(--facet)'}"/></svg>`;
 document.getElementById('stages').innerHTML=stages.map((s,i)=>`<li class="${i>3?'life':''}"><span class="gem">${gem(i>3)}</span><h3>${s[0]}</h3><p>${s[1]}</p></li>`).join('');
 
-const ico={
- users:'<circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M17 11h5M19.5 8.5v5"/>',
- today:'<rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 14l2 2 4-4"/>',
- chat:'<path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/>',
- star:'<path d="M12 2l2.6 6.4L21 9l-5 4.4L17.5 21 12 17.3 6.5 21 8 13.4 3 9l6.4-.6z"/>',
- mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
- tool:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-2.5z"/>',
- bars:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
- bell:'<path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/>',
- swap:'<circle cx="8" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5"/><path d="M14 9h7l-3-3M21 15h-7l3 3"/>',
- pin:'<path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><path d="M9.5 9.5l1.7 1.7 3.3-3.4"/>',
- mailbox:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 8l9 6 9-6"/><path d="M17 3v5"/>',
- shield:'<path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>'};
-const mods=[
- ['users','Contacts and import','Bring your list from any CRM or spreadsheet. Each contact gets a stage, key dates, household, photos and the personal details your campaigns use.'],
- ['today','Today list','The few things that need you today: replies, approvals and personal touches worth a call.'],
- ['chat','Campaigns','Fourteen ready-made sequences in your voice, planned monthly and approved by you.'],
- ['star','Events and RSVPs','Client appreciation events with invite, reminder, last call and recap, plus a live RSVP list.'],
- ['mail','Inbox','Two-way text and email in one place, matched to the client. STOP replies are honored on their own.'],
- ['tool','Trusted pros and spotlights','Your roofer, lender and inspector list ready to share, and a local pro featured in your monthly email.'],
- ['bars','Reports','Replies, RSVPs, referrals and repeat business by month, so you can see what is working.'],
- ['bell','Team alerts','Phone alerts when a client writes. The assigned agent first, then the whole team if nobody claims it in five minutes.'],
- ['swap','Client assignment','Every client has an agent and a backup. Route new leads by round robin or area, and reassign with full history.'],
- ['pin','Reviews and Google profile','A satisfaction survey and review link for every closing, reply drafts for new reviews, and closing photos posted to your Google profile.'],
- ['mailbox','Postcards and notes','Printed postcards, handwritten-style notes and real-pen cards, approved in your monthly plan and mailed for you.'],
- ['shield','Compliance built in','Consent on record for every contact, opt-outs honored everywhere, a weekly message limit, quiet hours and registered texting.']];
-document.getElementById('mods').innerHTML=mods.map(m=>`<article class="mod"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--facet)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ico[m[0]]}</svg><h3>${m[1]}</h3><p>${m[2]}</p></article>`).join('');
 
 const past=[['Reactivation','wake up quiet contacts'],['Monthly home tip','seasonal and useful'],['Giveaway and spotlight','local pros, real prizes'],['Client events','invite to recap'],['Home anniversary','every year, on the date'],['Referral ask','at the right moments'],['Transaction welcome','sets the tone'],['Annual traditions','the touch they expect']];
 const leads=[['Instant reply','within minutes'],['Lead nurture','until they are ready'],['Appointment reminders','fewer no-shows'],['Contract milestones','every step to closing'],['Closing thank-you','plus a review ask'],['30 and 90 day check-ins','settled in?']];
@@ -1061,26 +1134,10 @@ const lat=document.getElementById('lat');
 let d='';
 for(let r=0;r<5;r++)for(let c=0;c<5;c++){const x=40+c*110+(r%2?55:0),y=30+r*110;if(x>500)continue;d+=`<path d="M${x} ${y+80}V${y+30}a25 25 0 0 1 50 0v50"/>`;}
 lat.innerHTML=d;
+if(!/(^|\.)staysold\.alpineconsultingoregon\.com$/.test(location.hostname)){const fc=document.querySelector('.formcard');if(fc){const l=document.createElement('a');l.className='btn solid';l.href='https://staysold.alpineconsultingoregon.com/#pilot';l.target='_top';l.style.marginTop='36px';l.textContent='Request pilot access';fc.replaceWith(l)}}
 
-const form=document.getElementById('req'),err=document.getElementById('err'),done=document.getElementById('done'),txt=document.getElementById('done-text');
-const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-form.addEventListener('submit',e=>{
- e.preventDefault();
- const v=Object.fromEntries(new FormData(form));
- const miss=[];if(!v.name.trim())miss.push('name');if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.email.trim()))miss.push('a valid email');if(!v.brokerage.trim())miss.push('brokerage');
- if(miss.length){err.textContent='Please add '+miss.join(', ')+'.';return}
- err.textContent='';
- txt.textContent=`StaySold pilot request\nName: ${v.name.trim()}\nEmail: ${v.email.trim()}\nMobile: ${v.phone.trim()||'not given'}\nBrokerage: ${v.brokerage.trim()}\nPast clients and sphere: ${v.size}`;
- document.getElementById('done-h').textContent='Thank you, '+v.name.trim().split(' ')[0]+'.';
- form.hidden=true;done.hidden=false;done.scrollIntoView({block:'nearest'});
-});
-document.getElementById('edit').addEventListener('click',()=>{done.hidden=true;form.hidden=false});
-document.getElementById('copy').addEventListener('click',async e=>{
- const b=e.currentTarget;
- try{await navigator.clipboard.writeText(txt.textContent);b.textContent='Copied'}catch(_){b.textContent='Select the text above to copy'}
- setTimeout(()=>{b.textContent='Copy request'},2500);
-});
 }
 </script>
+<script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
 </body>
 </html>
